@@ -14,7 +14,7 @@ function App() {
           <Nav>Products</Nav>
           <Nav>Contact Us</Nav>
         </header>
-        <div className="text-6xl">Login Form</div>
+        <div className="text-6xl">Login&nbsp;Form</div>
           <img className="border-[10px] border-white rounded-full size-[200px] my-10"
                src="https://ucarecdn.com/3bc63ffc-1d6b-4944-bd98-befd7d18f434/"
                alt="Login sample profile picture" />
@@ -23,9 +23,9 @@ function App() {
         <Button>Login</Button>
         <label>
           <input type="checkbox" />
-          <span className="font-bold m-[10px]">Remember me</span>
+          <span className="font-bold m-[10px]">Remember&nbsp;me</span>
         </label>
-        <button className="underline">Forgot Password</button>
+        <button className="underline">Forgot&nbsp;Password</button>
         <Button>Cancel</Button>
       </div>
     </main>
