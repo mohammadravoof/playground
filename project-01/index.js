@@ -7,6 +7,13 @@ const fs = require('fs');
 // Middleware - Plugin
 app.use(express.urlencoded({ extended: false}));
 
+// Middleware no 2
+app.use((req,res,next)=> {
+    fs.appendFile("log.txt",`\n${Date.now()} : ${req.ip} : ${req.method} : ${req.path}`, (err, data) => {
+        next();
+    })
+});
+
 //Routes
 app.get('/', (req, res) => {
     const homepage = `<h1>Home Page</h1>`;
