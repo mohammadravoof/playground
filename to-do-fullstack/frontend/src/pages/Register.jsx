@@ -7,7 +7,7 @@ const Register = ({ setToken }) => {
   const [password, setPassword] = useState('');
 
   const register = () => {
-    axios.post('http://localhost:5000/register', { username, password })
+    axios.post('http://localhost:3000/register', { username, password })
       .then(response => setToken(response.data.token))
       .catch(error => console.log(error));
   };

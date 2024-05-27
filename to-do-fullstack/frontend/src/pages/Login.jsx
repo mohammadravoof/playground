@@ -7,7 +7,7 @@ const Login = ({ setToken }) => {
   const [password, setPassword] = useState('');
 
   const login = () => {
-    axios.post('http://localhost:5000/login', { username, password })
+    axios.post('http://localhost:3000/login', { username, password })
       .then(response => setToken(response.data.token))
       .catch(error => console.log(error));
   };

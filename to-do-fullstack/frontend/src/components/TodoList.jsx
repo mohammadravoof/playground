@@ -7,13 +7,13 @@ const TodoList = ({ token }) => {
   const [task, setTask] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:5000/todos', { headers: { Authorization: token } })
+    axios.get('http://localhost:3000/todos', { headers: { Authorization: token } })
       .then(response => setTodos(response.data))
       .catch(error => console.log(error));
   }, [token]);
 
   const addTodo = () => {
-    axios.post('http://localhost:5000/todos', { task }, { headers: { Authorization: token } })
+    axios.post('http://localhost:3000/todos', { task }, { headers: { Authorization: token } })
       .then(response => setTodos([...todos, response.data]))
       .catch(error => console.log(error));
   };
